@@ -10,20 +10,19 @@ html {
   height: 100%;
   scroll-behavior: smooth;
 }
-
+/* FONT STYLES  */
 @font-face {
   font-family: "Roboto";
   src: url("../Fonts/Roboto-Regular.woff2") format("woff2"),
-      url("../Fonts/Roboto-Regular.woff") format("woff");
+    url("../Fonts/Roboto-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-/* FONT STYLES  */
 @font-face {
   font-family:"Roboto";
   src: url("../Fonts/Roboto-Medium.woff2") format("woff2"),
-      url("../Fonts/Roboto-Medium.woff") format("woff");
+    url("../Fonts/Roboto-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -32,7 +31,7 @@ html {
 @font-face {
   font-family: "Roboto";
   src: url("../Fonts/Roboto-Bold.woff2") format("woff2"),
-      url("../Fonts/Roboto-Bold.woff") format("woff");
+    url("../Fonts/Roboto-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -41,7 +40,7 @@ html {
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 *:focus {
@@ -51,12 +50,16 @@ html {
 
 
 body {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Roboto";
-  color: #333;
-  background-color: var(--Primary);
+  font-family: "Roboto", "Arial",sans-serif;
+  color: var(--text-color);
+  line-height: 1.75;
+  font-size: 16px;
+  background-color:#fff
 }
 
 
