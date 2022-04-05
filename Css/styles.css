@@ -1,8 +1,13 @@
 /* CUSTOM PROPORTY */
 :root {
-  --Primary:#F3D7B7;
   --text-color: #333;
-  --Font: "Roboto", sans-serif;
+  --accent-color-green: #0a775f;
+  --accent-color-green-80: rgba(10,119,95,0.8);
+  --accent-color-green-60: rgba(10,119,95,0.8);
+  --accent-color-light-brown: #C99B67;
+  --accent-color-light-brown-80: rgba(201, 155, 103, 0.8);
+  --accent-color-light-brown-60: rgba(201, 155, 103, 0.6);
+  --outline-color:var(--accent-color-green);
 }
 
 html {
@@ -44,7 +49,7 @@ html {
 }
 
 *:focus {
-  outline: 3px dashed #C99B67;;
+  outline: 2px dashed var(--outline-color);
   outline-offset: 3px;
 }
 
@@ -59,7 +64,7 @@ body {
   color: var(--text-color);
   line-height: 1.75;
   font-size: 16px;
-  background-color:#fff
+  background-color:
 }
 
 
@@ -80,21 +85,143 @@ img{
 .main-content{
   flex-grow: 1;
 }
+/* site-wrapper */
+.site-header-hero-wrapper {
+background-image: url(../img/site-header-bg.jpg)
+}
 
-/* SITENAV */
 .site-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
+
 .site-header-container {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.site-header-top {
-}
-.site-header-logo {
+
+.site-header-logo-link {
+  flex-shrink: 0;
+  display: flex;
+  text-decoration: none;
 }
 .site-header-logo-img {
+  width: 235px;
+  height: 24px;
+  object-fit: contain;
 }
-.sitenav {
-}
+
 .sitenav-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
 }
-.sitenav-item {
+
+.sitenav-item:not(:last-child){
+  margin-right: 40px;
+}
+.sitenav-link{
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: normal;
+  font-weight: bold;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+.sitenav-link:hover{
+color:var(--accent-color-green);
+}
+.sitenav-link:active{
+  opacity: 0.6;
+}
+.site-header-logo-img:active{
+  opacity: 0.6;
+}
+/* HERO */
+.site-hero-container {
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+}
+.site-info-wrapper {
+  width: 100%;
+  max-width: 730px;
+  padding-top: 116px;
+  padding-bottom: 100px;
+  padding-right: 116px;
+  padding-left: 150px;
+}
+.hero-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: normal;
+  color: #000;
+  font-size: 64px;
+}
+.hero-text {
+  margin-top: 0;
+  margin-bottom: 34px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.hero-buttom {
+display:inline-block;
+padding: 16px 24px;
+letter-spacing: 1px;
+white-space: nowrap;
+font-size: 16px;
+font-weight: 500;
+border: 0;
+border-radius: 100px;
+cursor: pointer;
+text-decoration: none;
+text-transform: uppercase;
+line-height: normal;
+}
+.hero-buttom-green{
+background-color:var(--accent-color-green) ;
+color: #fff;
+}
+.hero-buttom-green:hover{
+background-color: var(--accent-color-green-80);
+}
+.hero-buttom-green:active{
+  background-color: var(--accent-color-green-80);
+}
+.site-hero-img {
+  width: 710px;
+  height: 696px;
+  object-fit: cover;
+}
+.site-hero-img-index{
+  height: 696px;
+}
+.buttom-brown{
+  background-color:var(--accent-color-light-brown);
+}
+.buttom-brown:hover{
+background-color: var(--accent-color-light-brown-80);
+}
+.buttom-brown:active{
+  background-color: var(--accent-color-light-brown-60);
+}
+
+/* RETINA BG  */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .form-info-item{
+        background-image: url("../img/site-header-bg@2x.jpg")
+    }
 }
