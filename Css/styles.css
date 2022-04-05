@@ -87,7 +87,8 @@ img{
 }
 /* site-wrapper */
 .site-header-hero-wrapper {
-background-image: url(../img/site-header-bg.jpg)
+background-image: url(../img/site-header-bg.jpg);
+margin-bottom: 20px;
 }
 
 .site-header {
@@ -225,3 +226,5 @@ only screen and (min-resolution: 2dppx) {
         background-image: url("../img/site-header-bg@2x.jpg")
     }
 }
+
+/* MAIN */
