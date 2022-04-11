@@ -36,7 +36,7 @@ html {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../Fonts/Roboto-Bold.woff2") format("woff2")
+  src: url("../Fonts/Roboto-Bold.woff2") format("woff2"),
   url("../Fonts/Roboto-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -135,6 +135,10 @@ img{
   color: var(--text-color);
   white-space: nowrap;
 }
+.sitenav-medium-font .sitenav-link{
+  font-size: 16px;
+  line-height: normal;
+}
 .sitenav-link:hover{
   color:var(--accent-color-green);
 }
@@ -205,6 +209,7 @@ img{
 }
 .buttom-brown{
   background-color:var(--accent-color-light-brown);
+  color: #fff;
 }
 .buttom-brown:hover{
   background-color: var(--accent-color-light-brown-80);
@@ -301,7 +306,7 @@ img{
 .index-features-heading {
   margin-top: 0;
   margin-bottom: 10px;
-  font: size 50px;
+  font-size: 50px;
   line-height:normal;
   color: #fff;
   text-transform: uppercase;
@@ -353,9 +358,10 @@ img{
   background-image: url(../img/HOW-IT-BG.jpg);
   padding: 50px 30px;
   background-color: var(--accent-color-green);
+  margin-bottom: 50px;
 }
 .how-it-works-heading {
-  font-style: 50px;
+  font-style: normal;
   line-height: normal;
   color: #fff;
   text-align: center;
@@ -378,7 +384,7 @@ img{
   flex-direction: column;
   width: calc(100% / 3 - 20px);
   margin-left: 20px;
-  counter-reset: how-it-works;
+  counter-increment: how-it-works;
 }
 .how-it-works-item::before{
   width: 60px;
@@ -400,7 +406,7 @@ img{
   font-size: 60px;
   margin-bottom: 45px;
   line-height: normal;
-  content: "0"counter(how-it-works);
+  content: "0" counter(how-it-works);
 }
 .how-it-works-info-heading {
   margin-top: 0;
@@ -416,10 +422,62 @@ img{
   font-size: 18px;
   line-height: 28px;
 }
-.how-it-works-cta :focus{
+.how-it-works-cta:focus{
   outline-color: var(--accent-color-light-brown);
 }
 
+/* SITE-FOOTER */
+.site-footer {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  background-image: url(../img/site-header-bg.jpg);
+}
+.site-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+}
+.site-footer-logo-link {
+  display: flex;
+}
+.site-footer-logo-img {
+  flex-shrink: 0;
+  width: 235px;
+  height: 24px;
+  object-fit: contain;
+}
+.site-footer-logo-link:hover{
+  opacity: 0.8;
+}
+.site-footer-logo-link:hover{
+  opacity: 0.6;
+}
+
+.site-footer-socials {
+}
+
+/* SOCIALS */
+.socials {
+  display: flex;
+  align-items:center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.socials-item:not(:last-child) {
+  margin-right: 30px;
+}
+.socials-link {
+  display: flex;
+  color: #333;
+}
+.socials-link:hover{
+  color:green;
+}
+.socials-link:active{
+  opacity: 0.6;
+}
 
 /* RETINA BG  */
 @media
@@ -442,4 +500,8 @@ only screen and (min-resolution: 2dppx) {
     }
     .how-it-works-inner {
       background-image: url("../img/HOW-IT-BG@2x.jpg");
+    }
+    .site-footer {
+      background-image: url("../img/site-header-bg@2x.jpg");
+    }
 }
