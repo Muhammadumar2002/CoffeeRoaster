@@ -42,6 +42,16 @@ html {
   font-style: normal;
   font-display: swap;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* GLOBAL STYLES */
 *,
 *::after,
@@ -124,6 +134,7 @@ img{
   display: flex;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .sitenav-item:not(:last-child){
@@ -138,6 +149,7 @@ img{
   font-weight: bold;
   color: var(--text-color);
   white-space: nowrap;
+  list-style: none;
 }
 .sitenav-medium-font .sitenav-link{
   font-size: 16px;
@@ -181,6 +193,12 @@ img{
   margin-bottom: 34px;
   line-height: 1.5;
   font-size: 16px;
+}
+.hero__about  {
+  max-width: 372px;
+}
+.hero__create{
+  max-width: 372px;
 }
 .hero-buttom {
   display:inline-block;
@@ -399,6 +417,8 @@ img{
 
 /* HOW-IT-WORK */
 .how-it-works{
+  margin-top: 20px;
+  margin-bottom: 20px;
   position: relative;
 }
 .how-it-works__container{
@@ -432,7 +452,9 @@ img{
   border: 3px dashed var(--accent-color-light-brown);
   z-index: 1;
   top: 219px;
-
+}
+.create__dashed-line{
+  top: 80px;
 }
 .how-it-works-list {
   display: flex;
@@ -713,6 +735,36 @@ img{
 
 }
 /* CTA  */
+
+/* RETINA-BG  */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .top-color {
+    background-image: url(../img/site-bg/main-watermark@2x.jpg);
+  }
+
+  .hero-one {
+    background-image: url(../img/site-bg/hero-one-bg@2x.jpg);
+  }
+
+  .hero-two {
+    background-image: url(../img/site-bg/hero-two@2x.jpg);
+  }
+
+  .hero-three {
+    background-image: url(../img/site-bg/hero-three@2x.jpg);
+  }
+
+  .checkbox-input-inner {
+    background-image: url(../img/card-box-bg@2x.jpg);
+  }
+
+}
 /* RETINA BG  */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
